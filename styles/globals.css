@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.cover{
+    width: 30px;
+    height: 30px;
+    background-color: antiquewhite;
+    background-image:url('/public/pokeball.png');
+    
+}

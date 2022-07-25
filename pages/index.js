@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 
 export default function index(props) {
@@ -21,19 +22,32 @@ export default function index(props) {
   return (
     <>
       <div className="w-full bg-slate-50 flex flex-col items-center">
-        <h1>Pokemon List</h1>
-        <div className="w-[45rem] grid grid-cols-3 place-items-center">
+        <h1 className="text-3xl mb-8">Pokemon List</h1>
+        <div className="w-[45rem] grid grid-cols-3 place-items-center gap-10">
           {dataPokemon.map((p, index) => {
             return (
-              <div key={index}>
-                <img src={p.image} alt={p.name} />
+              <div
+                key={index}
+                className="w-[15rem] py-5 text-center capitalize text-lg bg-slate-100 rounded-xl"
+              >
                 <p>{`00${index + 1}`.slice(-3)}</p>
+                <img src={p.image} alt={p.name} />
                 <p>{p.name}</p>
+                <Link href="/detail">
+                  <a className="text-sm bg-slate-200 py-1 px-5 rounded-md">
+                    more info
+                  </a>
+                </Link>
               </div>
             );
           })}
         </div>
-        <button onClick={getPokemon}>get pokemon</button>
+        <button
+          onClick={getPokemon}
+          className="px-4 bg-slate-800 text-white rounded-md my-10"
+        >
+          Load More
+        </button>
       </div>
     </>
   );

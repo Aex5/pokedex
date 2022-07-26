@@ -28,12 +28,12 @@ export default function index(props) {
             return (
               <div
                 key={index}
-                className="w-[15rem] py-5 text-center capitalize text-lg bg-slate-100 rounded-xl"
+                className="flex flex-col justify-center items-center w-[15rem] py-5 text-center capitalize text-lg bg-slate-100 rounded-xl"
               >
                 <p>{`00${index + 1}`.slice(-3)}</p>
                 <img src={p.image} alt={p.name} />
                 <p>{p.name}</p>
-                <Link href="/detail">
+                <Link href={`/pokemon/${p.name}`}>
                   <a className="text-sm bg-slate-200 py-1 px-5 rounded-md">
                     more info
                   </a>

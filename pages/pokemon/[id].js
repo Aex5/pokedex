@@ -14,6 +14,8 @@ export default function DetailPokemon(props) {
     <div>
       <div>
         <p>{props.res.name}</p>
+        <p>{props.res.height}</p>
+        <p>{props.res.id}</p>
       </div>
     </div>
   );
